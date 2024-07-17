@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(./form-builders-11-850x435.png);
+            background-size: 500px;
+            background-position: right bottom 200px;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            transition: transform 0.5s ease-in-out;
+        }
+        .clearfix{
+            clear: both;
+        }
+        .form-1 ,.form-2,.form-3,.form-4 h1{
+            color: #0254b7;
+            
+        }
+        .form-1,.form-2,.form-3,.form-4{
+            padding-top: 15%;
+            display: none;
+        }
+        .form-1.active, .form-2.active, .form-3.active, .form-4.active {
+            display: block;
+        }
+        .input-1, .input-2 {
+            padding: 10px;
+            margin-top: 15px;
+            width: 20%;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            outline: none;
+            margin-right: 30px;
+        }
+        .input-1:focus, .input-2:focus {
+            border-bottom: 2px solid #0254b7;
+            color: blue;
+        }
+        .conti-1, .conti-2, .conti-3, .prev-2, .prev-3, .prev-4 {
+            padding: 10px 30px;
+            margin-top: 25px;
+            font-size: 16px;
+            background-color: #0254b7;
+            color: white;
+            border: none;
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .conti-1.enabled, .conti-2.enabled, .conti-3.enabled, .prev-2, .prev-3, .prev-4 {
+            opacity: 1;
+            cursor: pointer;
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .error{
+            border: 1px solid red;
+        }
+        .progress-bar{
+            position: absolute;
+            bottom: 50px;
+            left: 7%;
+        }
+        .bot-icon-1,.bot-icon-2,.bot-icon-3{
+            font-size: 35px!important;
+            color: #c7c7c7;
+        }
+        .step-1{
+            position: relative;
+            float: left;
+            width: 250px;
+        }
+        .line-1 ,.line-2,.line-3{
+            height: 2px;
+            width: 200px;
+            background-color: #c7c77c;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-1 active">
+        <div class="container">
+            <h1><i class="fa-solid fa-user"></i>&nbsp;Personal Information</h1>
+            <br><br>
+            <input type="text" placeholder="First name" class="input-1" required>
+            <input type="text" placeholder="First name" class="input-1" required><br>
+            <input type="text" placeholder="First name" class="input-1" required>
+            <input type="text" placeholder="First name" class="input-1" required><br>
+            <input type="text" placeholder="First name" class="input-1" required>
+            <input type="text" placeholder="First name" class="input-1" required>
+            <div class="clearfix"></div>
+            <button class="conti-1" disabled="true">Continue &nbsp;<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <div class="form-2">
+        <div class="container">
+            <h1><i class="fa-solid fa-building-columns"></i>&nbsp; Initution Information</h1>
+            <input type="text" placeholder="First name" class="input-2">
+            <input type="text" placeholder="First name" class="input-2">
+            <div class="clearfix"></div>
+            <button class="prev-2">Previous &nbsp;<i class="fa-solid fa-angle-left"></i></button>
+            <button class="conti-2" disabled="true">Continue &nbsp;<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <div class="form-3">
+        <div class="container">
+            <h1><i class="fa-solid fa-file-import"></i>&nbsp;Submit Documetation</h1>
+            <form action="">
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+                <div>
+                    <label for="First-name">Enter your name</label>
+                    <input type="file" placeholder="First name" class="input-3">
+                </div>
+            </form>
+            <div class="clearfix"></div>
+            <button class="prev-3">Previous &nbsp;<i class="fa-solid fa-angle-left"></i></button>
+            <button class="conti-3" disabled="true">Submit &nbsp;<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <div class="form-4">
+        <div class="container">
+            <h1>Congratulations! You have successfully submitted<br> your application or profile.</h1>
+          
+        </div>
+    </div>
+    <!-- Progress bar -->
+    <div class="progress-bar">
+        <div class="container">
+            <div class="step-1">
+                <i class="fa-solid fa-user bot-icon-1"></i>
+                <div class="line-1"></div>
+            </div>
+            <div class="step-1">
+                <i class="fa-solid fa-building-columns bot-icon-2"></i>
+                <div class="line-2"></div>
+            </div>
+            <div class="step-1">
+                <i class="fa-solid fa-file-import bot-icon-3"></i>
+                <div class="line-3"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var inputs1 = document.querySelectorAll('.input-1');
+            var conti1 = document.querySelector('.conti-1');
+            var prev2 = document.querySelector('.prev-2');
+            var inputs2 = document.querySelectorAll('.input-2');
+            var conti2 = document.querySelector('.conti-2');
+            var prev3 = document.querySelector('.prev-3');
+            var inputs3 = document.querySelectorAll('.input-3');
+            var conti3 = document.querySelector('.conti-3');
+            var prev4 = document.querySelector('.prev-4');
+
+            inputs1.forEach(input => {
+                input.addEventListener('keyup', function() {
+                    var allFilled = Array.from(inputs1).every(i => i.value !== '');
+                    if (allFilled) {
+                        conti1.classList.add('enabled');
+                        conti1.disabled = false;
+                    } else {
+                        conti1.classList.remove('enabled');
+                        conti1.disabled = true;
+                    }
+                });
+            });
+
+            inputs2.forEach(input => {
+                input.addEventListener('keyup', function() {
+                    var allFilled = Array.from(inputs2).every(i => i.value !== '');
+                    if (allFilled) {
+                        conti2.classList.add('enabled');
+                        conti2.disabled = false;
+                    } else {
+                        conti2.classList.remove('enabled');
+                        conti2.disabled = true;
+                    }
+                });
+            });
+
+            inputs3.forEach(input => {
+                input.addEventListener('change', function() {
+                    var allFilled = Array.from(inputs3).every(i => i.files.length > 0);
+                    if (allFilled) {
+                        conti3.classList.add('enabled');
+                        conti3.disabled = false;
+                    } else {
+                        conti3.classList.remove('enabled');
+                        conti3.disabled = true;
+                    }
+                });
+            });
+
+            conti1.addEventListener('click', function() {
+                document.querySelector('.form-1').classList.remove('active');
+                document.querySelector('.form-2').classList.add('active');
+                document.querySelector('.bot-icon-1').style.color = '#0254b7';
+                document.querySelector('.line-1').style.backgroundColor = '#0254b7';
+            });
+
+            prev2.addEventListener('click', function() {
+                document.querySelector('.form-1').classList.add('active');
+                document.querySelector('.form-2').classList.remove('active');
+                document.querySelector('.bot-icon-1').style.color = '#c7c7c7';
+                document.querySelector('.line-1').style.backgroundColor = '#c7c7c7';
+            });
+
+            conti2.addEventListener('click', function() {
+                document.querySelector('.form-2').classList.remove('active');
+                document.querySelector('.form-3').classList.add('active');
+                document.querySelector('.bot-icon-2').style.color = '#0254b7';
+                document.querySelector('.line-2').style.backgroundColor = '#0254b7';
+            });
+
+            prev3.addEventListener('click', function() {
+                document.querySelector('.form-2').classList.add('active');
+                document.querySelector('.form-3').classList.remove('active');
+                document.querySelector('.bot-icon-2').style.color = '#c7c7c7';
+                document.querySelector('.line-2').style.backgroundColor = '#c7c7c7';
+            });
+
+            conti3.addEventListener('click', function() {
+                document.querySelector('.form-3').classList.remove('active');
+                document.querySelector('.form-4').classList.add('active');
+                document.querySelector('.bot-icon-3').style.color = '#0254b7';
+                document.querySelector('.line-3').style.backgroundColor = '#0254b7';
+            });
+
+            prev4.addEventListener('click', function() {
+                document.querySelector('.form-3').classList.add('active');
+                document.querySelector('.form-4').classList.remove('active');
+                document.querySelector('.bot-icon-3').style.color = '#c7c7c7';
+                document.querySelector('.line-3').style.backgroundColor = '#c7c7c7';
+            });
+        });
+    </script>
+</body>
+</html>
